@@ -1,12 +1,6 @@
 FROM docker
 LABEL maintainer: docker@irespaldiza.com
 
-RUN apk update && apk add --update \
-    curl \
-    vim \
-    git \
-    bash \
-    py-pip 
-
-RUN rm -rf /var/cache/apk/*
+RUN apk --update add py-pip &&\
+     rm -rf /var/cache/apk/*
 RUN pip install docker-compose
