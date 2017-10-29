@@ -10,8 +10,3 @@ RUN apk update && apk add --update \
 
 RUN rm -rf /var/cache/apk/*
 RUN pip install docker-compose
-ADD aliases.sh /etc/profile.d/aliases.sh
-
-WORKDIR /root
-
-CMD bash
